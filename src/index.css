@@ -1,118 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
-  :root {
-    --background: 220 30% 8%;
-    --foreground: 210 40% 98%;
-
-    --card: 220 25% 12%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 220 28% 10%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 195 100% 50%;
-    --primary-foreground: 220 30% 8%;
-
-    --primary-glow: 195 100% 65%;
-    --primary-dark: 195 100% 35%;
-
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 220 20% 16%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 30% 8%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 20% 20%;
-    --input: 220 20% 18%;
-    --ring: 195 100% 50%;
-
-    --radius: 0.75rem;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(220 100% 60%));
-    --gradient-glow: linear-gradient(90deg, hsl(195 100% 50% / 0.3), hsl(220 100% 60% / 0.3));
-    --gradient-card: linear-gradient(180deg, hsl(220 25% 12%), hsl(220 30% 8%));
-    
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
-    --shadow-intense: 0 0 60px hsl(195 100% 50% / 0.5);
-    --shadow-card: 0 10px 40px hsl(220 30% 5% / 0.5);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body, #root {
+    background-color: #0C0C0C;
+    color: #D7E2EA;
+    width: 100%;
+    min-height: 100vh;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Gradient text utility */
-  .gradient-text {
-    background: var(--gradient-primary);
+@layer utilities {
+  .hero-heading {
+    background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  /* Glow effect */
-  .glow {
-    box-shadow: var(--shadow-glow);
-  }
-
-  .glow-intense {
-    box-shadow: var(--shadow-intense);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px hsl(195 100% 50% / 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px hsl(195 100% 50% / 0.6);
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    color: transparent;
   }
 }
