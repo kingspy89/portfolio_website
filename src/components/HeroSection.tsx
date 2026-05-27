@@ -1,4 +1,3 @@
-import React from "react";
 import { Magnet } from "./ui/Magnet";
 import { FadeIn } from "./ui/FadeIn";
 import { ContactButton } from "./ui/ContactButton";

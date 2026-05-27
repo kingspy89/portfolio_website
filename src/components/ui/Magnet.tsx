@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { type ReactNode, useRef, useState, useEffect } from "react";
 
 interface MagnetProps {
-  children: React.ReactNode;
+  children: ReactNode;
   padding?: number;
   strength?: number;
   activeTransition?: string;
